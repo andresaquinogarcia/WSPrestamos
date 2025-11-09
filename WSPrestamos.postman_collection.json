@@ -1,0 +1,84 @@
+{
+	"info": {
+		"_postman_id": "f77bcbd2-c822-4ab1-afee-5fec7d0ff934",
+		"name": "WSPrestamos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Calcular prestamo",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"idMaterial\": \"001\",\n    \"gramos\": 10.5\n  }"
+				},
+				"url": {
+					"raw": "https://wsprestamos-f0ecf2gqecffe9dh.canadacentral-01.azurewebsites.net/api/prestamos/calcular",
+					"protocol": "https",
+					"host": [
+						"wsprestamos-f0ecf2gqecffe9dh",
+						"canadacentral-01",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"prestamos",
+						"calcular"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Status prestamo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://wsprestamos-f0ecf2gqecffe9dh.canadacentral-01.azurewebsites.net/api/prestamos/status",
+					"protocol": "https",
+					"host": [
+						"wsprestamos-f0ecf2gqecffe9dh",
+						"canadacentral-01",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"prestamos",
+						"status"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
