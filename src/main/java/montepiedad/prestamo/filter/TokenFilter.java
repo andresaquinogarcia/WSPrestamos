@@ -79,6 +79,15 @@ public class TokenFilter extends OncePerRequestFilter {
             response.setStatus(HttpStatus.UNAUTHORIZED.value());
             response.setContentType("application/json");
 
+            
+            String origin = request.getHeader("Origin");
+            if (origin != null) {
+                response.setHeader("Access-Control-Allow-Origin", origin);
+                response.setHeader("Vary", "Origin");
+                response.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
+                response.setHeader("Access-Control-Allow-Methods", "GET,POST,PUT,DELETE,OPTIONS");
+            }
+            
             ObjectMapper mapper = new ObjectMapper();
             mapper.writeValue(response.getWriter(), error);
 
@@ -102,6 +111,15 @@ public class TokenFilter extends OncePerRequestFilter {
             error.setStatus(HttpStatus.UNAUTHORIZED.value());
             response.setStatus(HttpStatus.UNAUTHORIZED.value());
             response.setContentType("application/json");
+            
+            String origin = request.getHeader("Origin");
+            if (origin != null) {
+                response.setHeader("Access-Control-Allow-Origin", origin);
+                response.setHeader("Vary", "Origin");
+                response.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
+                response.setHeader("Access-Control-Allow-Methods", "GET,POST,PUT,DELETE,OPTIONS");
+            }
+            
             ObjectMapper mapper = new ObjectMapper();
             mapper.writeValue(response.getWriter(), error);
 

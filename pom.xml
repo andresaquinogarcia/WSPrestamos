@@ -84,7 +84,7 @@
 	                    <goals>
 	                        <goal>report</goal>
 	                    </goals>
-	                </execution>
+	                </execution> 
 	            </executions>
 	            <configuration>
 			        <excludes>
